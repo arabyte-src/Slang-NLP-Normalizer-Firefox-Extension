@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Slang Meaning Helper",
+  "version": "0.1.0",
+  "description": "Select text to see slang meanings.",
+  "browser_action": {
+    "default_title": "Slang Meaning Helper",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "permissions": ["storage", "activeTab", "<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}
